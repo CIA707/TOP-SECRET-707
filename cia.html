@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classified Portal • TOP SECRET 707</title>
+
+<style>
+/* Base resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Header & Nav */
+header {
+    width: 100%;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid crimson;
+    z-index: 100;
+}
+header h1 {
+    font-size: 32px;
+    color: crimson;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+nav {
+    display: flex;
+    gap: 30px;
+}
+nav a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 16px;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: gold;
+}
+
+/* Hero Section */
+.hero {
+    height: 95vh;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/5/57/Aerial_view_of_the_Central_Intelligence_Agency_headquarters%2C_Langley%2C_Virginia_-_Corrected_and_Cropped.jpg")
+        center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero-overlay {
+    backdrop-filter: brightness(40%);
+    width: 100%;
+    padding: 60px 30px;
+}
+.hero h2 {
+    font-size: 48px;
+    color: crimson;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 8px black;
+}
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.hero button {
+    padding: 12px 30px;
+    font-size: 18px;
+    background: crimson;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.hero button:hover {
+    background: gold;
+    color: black;
+}
+
+/* Content Sections */
+.content {
+    max-width: 1000px;
+    margin: 60px auto 40px;
+    padding: 0 20px;
+}
+.content h3 {
+    color: crimson;
+    font-size: 28px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 8px;
+}
+.content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 8px;
+    color: #e0e0e0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 18px;
+    background: #0a0a0a;
+    border-top: 2px solid crimson;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>TOP SECRET 707</h1>
+</header>
+
+<section class="hero">
+    <div class="hero-overlay">
+        <h2>CLASSIFIED ACCESS PORTAL</h2>
+        <p>Authorized Personnel Only — Confirm Your Credentials</p>
+        <button onclick="window.location='login.html'">ENTER SECURE LOGIN</button>
+    </div>
+</section>
+
+<div class="content">
+    <h3>ABOUT TRF</h3>
+    <p>Tactical Record File (TRF) is classified: an encrypted intelligence archive tracking global operations and secure analytics.</p>
+
+    <h3>HISTORY & MISSION</h3>
+    <p>The Central Intelligence Agency functions as a premier foreign intelligence service, collecting, analyzing, and protecting global strategic data for national security leadership. :contentReference[oaicite:2]{index=2}</p>
+
+    <h3>OPERATIONS ARCHIVE</h3>
+    <p>Covert programs and intelligence missions are documented here, shaped by evolving threats and strategic field insights.</p>
+</div>
+
+<footer>
+    ULTRA SECURE CLASSIFIED ARCHIVES — 2026
+</footer>
+
+</body>
+</html>

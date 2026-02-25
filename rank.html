@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="Downloads/DeWatermark.ai_1750598230971_deblurred.jpeg" type="image/png">
+<title>IDENTITY</title>
+
+<style>
+body {
+    background: #0a0a0a;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #111;
+    border-bottom: 2px solid crimson;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+header h1 {
+    color: crimson;
+    font-size: 24px;
+}
+
+nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    border: 1px solid #444;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #444;
+    color: #fff;
+}
+
+.container {
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section {
+    margin-bottom: 30px;
+    border-left: 4px solid crimson;
+    padding-left: 14px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    cursor: pointer;
+    color: #ddd;
+    transition: 0.3s;
+}
+
+.section-title:hover {
+    color: #fff;
+}
+
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.section-content.visible {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+.download-btn {
+    padding: 10px 18px;
+    background: #333;
+    color: #e0e0e0;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.download-btn:hover {
+    background: #444;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>AGENT RANK CARD — TRF</h1>
+    <nav>
+        <a href="front.html">Home</a> <!-- Back link to CIA profile/home page --> 
+    </nav>
+</header>
+
+<div class="container">
+
+    <button class="download-btn" onclick="downloadCV()">Download CV</button>
+
+    <div class="section">
+        <div class="section-title" onclick="toggleSection('identityContent')">IDENTITY</div>
+        <div id="identityContent" class="section-content">
+            <p>Codename: DARE-DEVIL</p>
+            <p>Full Name: J*S*IN *. FO***S </p>
+            <p>Base of Operations: Arlington, Virginia, USA</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title" onclick="toggleSection('achievementsContent')">ACHIEVEMENTS & HONORS</div>
+        <div id="achievementsContent" class="section-content">
+            <p>- Top‑Tier Strategic Intelligence Specialist</p>
+            <p>- Recognized for Precision Field Analysis</p>
+            <p>- Awarded Silver Cipher Medal (U.S. Intelligence)</p>
+            <p>- Commendations for Counter‑Threat Recon Operations</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title" onclick="toggleSection('serviceContent')">ACTIVE SERVICE RECORD</div>
+        <div id="serviceContent" class="section-content">
+            <p><strong>Years of Service:</strong> 7 Years</p>
+            <p><strong>Agency Division:</strong> 707 Agency</p>
+            <button onclick="toggleSection('rankDetails')">View Rank / Level Details</button>
+
+            <div id="rankDetails" class="section-content">
+                <p><strong>Level:</strong> 8</p>
+                <p><strong>Designation:</strong> FLR,CMM,GEN Lead</p>
+                <p><strong>Role:</strong> Strategic Intel & Field Coordination</p>
+                <p><strong>Internal Rating:</strong> Top Class Operational Efficiency</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title" onclick="toggleSection('backgroundContent')">MISSION BACKGROUND (CLASSIFIED)</div>
+        <div id="backgroundContent" class="section-content">
+            <p>Agent Merlin Forios was selected for high‑level intelligence operations due to exceptional analytical and operational performance. His missions have included strategic algorithm decryption, international intelligence coordination, advanced counter‑surveillance implementation, and adaptive cryptologic response system development.</p>
+            <p>Operational records classify Agent Forios among the most distinguished assets in the 707 Agency Division. Due to continued operational confidentiality, core mission details remain sealed.</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function toggleSection(id) {
+    document.getElementById(id).classList.toggle("visible");
+}
+
+function downloadCV() {
+    const cvContent = `
+Merlin Forios - Classified Profile
+-------------------------------------
+Codename: TRF‑Forios
+Full Name: Merlin Forios
+Base of Operations: Arlington, Virginia, USA
+Years of Service: 7 Years
+Agency Level: 8
+Division: 707 Agency
+
+Achievements:
+- Top‑Tier Strategic Intelligence Specialist
+- Silver Cipher Medal (U.S. Intelligence)
+- Counter‑Threat Recon Commendations
+
+Service Record:
+- Strategic Algorithm Decryption
+- International Intel Coordination
+- Advanced Counter‑Surveillance
+
+(End of CV)
+    `;
+    const blob = new Blob([cvContent], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "Merlin_Forios_Profile_CV.txt";
+    link.click();
+}
+</script>
+
+</body>
+</html>

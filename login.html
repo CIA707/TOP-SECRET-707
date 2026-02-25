@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="Downloads/DeWatermark.ai_1750598230971_deblurred.jpeg" type="image/png">
+<title>CIA 707 Portal</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Courier New', monospace;
+}
+
+body{
+    background:black;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* Background glow */
+body::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:radial-gradient(circle, rgba(255,0,0,0.2), black 70%);
+    z-index:-1;
+}
+
+/* Login Box */
+.login-box{
+    background:#111;
+    padding:40px;
+    width:350px;
+    border:1px solid crimson;
+    box-shadow:0 0 30px rgba(255,0,0,0.4);
+    text-align:center;
+}
+
+.login-box h2{
+    color:crimson;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+.format{
+    font-size:14px;
+    margin-bottom:15px;
+    color:gold;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    background:black;
+    border:1px solid #333;
+    color:white;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:crimson;
+    border:none;
+    color:white;
+    cursor:pointer;
+    margin-top:10px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:gold;
+    color:black;
+}
+
+/* Warning */
+.warning{
+    display:flex;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
+    color:red;
+    font-size:30px;
+    font-weight:bold;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="login-box" id="loginBox">
+    <h2>SECURE LOGIN</h2>
+    <div class="format">
+        Format: Cl-**_name-@Cia.gov
+    </div>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="enterSystem()">ENTER</button>
+</div>
+
+<div class="warning" id="warningMessage" style="display:none;">
+    ❌ Incorrect Credentials!<br>Try again.
+</div>
+
+<script>
+function enterSystem(){
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+
+    const validUserEnc = "Q0w3Mk1lcmxpbkBjaWEuZ292";   // base64 of 1
+    const validPassEnc = "RGV2aWxhZ2VudGZvcmlvczI=";   // base64 of 1
+
+    const validUser = atob(validUserEnc);
+    const validPass = atob(validPassEnc);
+
+    if(user === validUser && pass === validPass){
+        sessionStorage.setItem('loggedIn','true');
+        window.location.href = "cia.html";
+    } else {
+        alert("Incorrect Credentials!");
+    }
+}
+</script>
+</script>
+
+</body>
+</html>
